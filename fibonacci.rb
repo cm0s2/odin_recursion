@@ -1,6 +1,17 @@
 
 def fib(num)
+  result = []
 
+  num.times do
+    if result.length == 0
+      result.append(0)
+    elsif result.length == 1
+      result.append(1)
+    else
+      result.append(result[-1] + result[-2])
+    end
+  end
+  result
 end
 
 def fib_rec(num)
@@ -15,4 +26,5 @@ def fib_rec(num)
   end
 end
 
+p fib(8)
 p fib_rec(8)
